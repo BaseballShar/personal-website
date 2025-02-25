@@ -5,8 +5,9 @@ p {
 
 body {
   padding-left: 5vw;
+  padding-right: 5vw;
   padding-top: 5vh;
-  background-color: lightsalmon;
+  background-color: #c7f9cc;
 }
 
 a {
@@ -17,4 +18,33 @@ a {
   display: flex;
   font-size: 40px;
   gap: 20px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.project-cell {
+  text-align: center;
+  border-radius: 20px;
+}
+
+.project-img {
+  width: 90%;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.project-title {
+  text-align: left;
+  margin-left: 5%;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.project-subtitle {
+  text-align: left;
+  margin-left: 5%;
 }
