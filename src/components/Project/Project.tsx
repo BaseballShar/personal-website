@@ -17,7 +17,7 @@ interface Project {
   img: string;
 }
 
-const projectsData: [Project] = [
+const projectsData: Project[] = [
   {
     title: "Weather Information System",
     subtitle: "React, Next.js",

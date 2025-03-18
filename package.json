@@ -1,5 +1,6 @@
 {
   "name": "personal-website",
+  "homepage": "https://baseballshar.github.io/personal-website/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +9,12 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "host": "vite --host",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "moment": "^2.30.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
