@@ -1,0 +1,19 @@
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.header-icon {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.header-icon:hover {
+  opacity: 0.6;
+}
