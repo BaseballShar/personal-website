@@ -3,7 +3,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router";
 
-const Header = ({ title }) => {
+const Header = ({ title }: { title: string }) => {
   return (
     <div className="header-row">
       <Link to="/personal-website">

@@ -1,6 +1,13 @@
 h1,
+h2,
+table,
+ul,
 p {
   font-family: "IBM Plex Mono", serif;
+}
+
+p {
+  text-align: justify;
 }
 
 body {

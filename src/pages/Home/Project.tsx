@@ -8,6 +8,7 @@ import rpgCover from "../../assets/rpg.png";
 import shellCover from "../../assets/shell.png";
 import timetableCover from "../../assets/timetable.jpg";
 import weatherCover from "../../assets/weather.png";
+import { useNavigate } from "react-router";
 
 interface Project {
   title: string;
@@ -15,6 +16,7 @@ interface Project {
   dateStart: moment.Moment;
   dateEnd: moment.Moment;
   img: string;
+  path?: string;
 }
 
 const projectsData: Project[] = [
@@ -31,6 +33,7 @@ const projectsData: Project[] = [
     dateStart: moment("20230901"),
     dateEnd: moment("20240401"),
     img: fypCover,
+    path: "fyp",
   },
   {
     title: "Timetable Management System",
@@ -63,8 +66,16 @@ const projectsData: Project[] = [
 ];
 
 const ProjectCell = ({ content }: { content: Project }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="project-cell" style={{ backgroundColor: colors.secondary }}>
+    <div
+      className="project-cell"
+      onClick={() => {
+        navigate(content?.path || "");
+      }}
+      style={{ backgroundColor: colors.secondary }}
+    >
       <img className="project-img" src={content.img} />
       <p className="project-title">{content.title}</p>
       <p className="project-subtitle">{content.subtitle}</p>

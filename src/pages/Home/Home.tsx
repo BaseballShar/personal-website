@@ -57,7 +57,7 @@ const Education = () => {
   );
 };
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <Introduction />
@@ -67,3 +67,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

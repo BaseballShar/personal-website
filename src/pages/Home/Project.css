@@ -19,6 +19,11 @@
 .project-cell {
   text-align: center;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+.project-cell:hover {
+  opacity: 0.8;
 }
 
 .project-img {
