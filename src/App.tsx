@@ -1,27 +1,16 @@
 import "./App.css";
-import { ProjectList } from "./components/Project/Project";
-import { Introduction } from "./components/Introduction/Introduction";
-
-const Education = () => {
-  return (
-    <div>
-      <h1>Education</h1>
-      <p>
-        I was unfortunately enrolled into HKU in 2020, and somehow managed to
-        graduate with flyingColours (const flyingColours: string = "First Class
-        Honours")
-      </p>
-    </div>
-  );
-};
+import { BrowserRouter, Route, Routes } from "react-router";
+import { Home } from "./pages/Home/Home";
 
 const App = () => {
   return (
-    <>
-      <Introduction />
-      <ProjectList />
-      <Education />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="personal-website">
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

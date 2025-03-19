@@ -1,7 +1,1 @@
-# Design Ideas
-## Home page
-- Education
-- Projects
-- Skills
-## Header
-## Footer
+This is Baseball's website, it is under construction!
