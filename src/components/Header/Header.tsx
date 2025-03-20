@@ -8,7 +8,7 @@ const Header = ({ hasBack, title }: { hasBack?: boolean; title: string }) => {
   return (
     <div className="header-row">
       {hasBack && (
-        <Link to="/personal-website">
+        <Link to="/">
           <IoIosArrowBack className="header-icon" />
         </Link>
       )}
