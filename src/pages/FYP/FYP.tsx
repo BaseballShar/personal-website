@@ -267,7 +267,7 @@ const Resources = () => {
 const FYP = () => {
   return (
     <>
-      <Header title="Final Year Project" />
+      <Header hasBack title="Final Year Project" />
       <Introduction />
       <Methodology />
       <Results />

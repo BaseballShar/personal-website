@@ -1,13 +1,10 @@
-import { MdEmail } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
 import "./Home.css";
 import { ProjectList } from "./Project";
+import Header from "../../components/Header/Header";
 
 const Introduction = () => {
   return (
     <div>
-      <h1>Baseball Chan</h1>
       <p>
         I am a software engineer. I co-developed a financial management mobile
         application as my final year project. Know some C and C++ enough to
@@ -28,22 +25,6 @@ const Introduction = () => {
   );
 };
 
-const ContactList = () => {
-  return (
-    <div className="contact-list">
-      <a href="https://github.com/BaseballShar">
-        <FaGithub />
-      </a>
-      <a href="https://www.linkedin.com/in/baseball-chan-98b00923b/">
-        <FaLinkedin />
-      </a>
-      <a href="mailto:workingcth@gmail.com">
-        <MdEmail />
-      </a>
-    </div>
-  );
-};
-
 const Education = () => {
   return (
     <div>
@@ -60,8 +41,8 @@ const Education = () => {
 const Home = () => {
   return (
     <>
+      <Header title="Baseball's Website" />
       <Introduction />
-      <ContactList />
       <ProjectList />
       <Education />
     </>

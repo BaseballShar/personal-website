@@ -16,7 +16,7 @@ interface Project {
   dateStart: moment.Moment;
   dateEnd: moment.Moment;
   img: string;
-  path?: string;
+  url: string;
 }
 
 const projectsData: Project[] = [
@@ -26,6 +26,7 @@ const projectsData: Project[] = [
     dateStart: moment("20240601"),
     dateEnd: moment("20240601"),
     img: weatherCover,
+    url: "https://baseballshar.github.io/weather-app/",
   },
   {
     title: "Final Year Project",
@@ -33,7 +34,7 @@ const projectsData: Project[] = [
     dateStart: moment("20230901"),
     dateEnd: moment("20240401"),
     img: fypCover,
-    path: "fyp",
+    url: "fyp",
   },
   {
     title: "Timetable Management System",
@@ -41,6 +42,7 @@ const projectsData: Project[] = [
     dateStart: moment("20221001"),
     dateEnd: moment("20221101"),
     img: timetableCover,
+    url: "https://github.com/BaseballShar/Timetable-Management-System",
   },
   {
     title: "Linux Shell",
@@ -48,6 +50,7 @@ const projectsData: Project[] = [
     dateStart: moment("20221001"),
     dateEnd: moment("20221001"),
     img: shellCover,
+    url: "https://github.com/BaseballShar/Shell-Simulation",
   },
   {
     title: "BigTwo Game",
@@ -55,6 +58,7 @@ const projectsData: Project[] = [
     dateStart: moment("20211001"),
     dateEnd: moment("20211201"),
     img: bigTwoCover,
+    url: "https://github.com/BaseballShar/BigTwo",
   },
   {
     title: "Text based RPG Game",
@@ -62,18 +66,26 @@ const projectsData: Project[] = [
     dateStart: moment("20210301"),
     dateEnd: moment("20210401"),
     img: rpgCover,
+    url: "https://github.com/BaseballShar/Text-Fantasy-RPG",
   },
 ];
 
 const ProjectCell = ({ content }: { content: Project }) => {
   const navigate = useNavigate();
 
+  // Handles in-site and external navigations
+  const handleNavigate = (url: string) => {
+    if (url.includes("http")) {
+      window.location.href = url;
+    } else {
+      navigate(url);
+    }
+  };
+
   return (
     <div
       className="project-cell"
-      onClick={() => {
-        navigate(content?.path || "");
-      }}
+      onClick={() => handleNavigate(content.url)}
       style={{ backgroundColor: colors.secondary }}
     >
       <img className="project-img" src={content.img} />
