@@ -20,3 +20,7 @@ body {
 a {
   color: inherit; /* Use inherited color */
 }
+
+.align-center {
+  text-align: center;
+}

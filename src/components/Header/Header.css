@@ -4,11 +4,6 @@
   align-items: center;
 }
 
-.header-right {
-  display: flex;
-  gap: 15px;
-}
-
 .header-icon {
   font-size: 32px;
   cursor: pointer;
@@ -16,4 +11,24 @@
 
 .header-icon:hover {
   opacity: 0.6;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+/* desktop style */
+@media only screen and (min-width: 601px) {
+  .mobile {
+    display: none;
+  }
+}
+
+/* mobile style */
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
 }
