@@ -108,7 +108,7 @@ export const ProjectList = () => {
       <h1 className="title">Projects</h1>
       <div className="project-grid">
         {projectsData.map((item) => (
-          <ProjectCell content={item} />
+          <ProjectCell key={item.title} content={item} />
         ))}
       </div>
     </div>

@@ -1,13 +1,22 @@
 import "./Header.css";
 import { IoIosArrowBack } from "react-icons/io";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router";
+import { useTheme, useToggleTheme } from "../../contexts/ThemeContext";
 
 // Displays right justified buttons of contact
 const ContactBtns = () => {
+  const theme = useTheme();
+  const toggleTheme = useToggleTheme();
+
   return (
     <div className="btn-group">
+      {theme === "light" ? (
+        <FaMoon className="header-icon" onClick={toggleTheme} />
+      ) : (
+        <FaSun className="header-icon" onClick={toggleTheme} />
+      )}
       <a href="https://github.com/BaseballShar">
         <FaGithub className="header-icon" />
       </a>
