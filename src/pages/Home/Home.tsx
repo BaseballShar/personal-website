@@ -1,6 +1,7 @@
 import "./Home.css";
 import { ProjectList } from "./Project";
 import Header from "../../components/Header/Header";
+import MainPane from "../../components/MainPane/MainPane";
 
 const Introduction = () => {
   return (
@@ -40,12 +41,12 @@ const Education = () => {
 
 const Home = () => {
   return (
-    <>
+    <MainPane>
       <Header title="Baseball's Website" />
       <Introduction />
       <ProjectList />
       <Education />
-    </>
+    </MainPane>
   );
 };
 

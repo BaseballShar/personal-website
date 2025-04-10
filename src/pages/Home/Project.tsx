@@ -9,6 +9,7 @@ import shellCover from "../../assets/shell.png";
 import timetableCover from "../../assets/timetable.jpg";
 import weatherCover from "../../assets/weather.png";
 import { useNavigate } from "react-router";
+import { useTheme } from "../../contexts/ThemeContext";
 
 interface Project {
   title: string;
@@ -72,6 +73,9 @@ const projectsData: Project[] = [
 
 const ProjectCell = ({ content }: { content: Project }) => {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const backgroundColor =
+    theme === "light" ? colors.light.accent : colors.black.accent;
 
   // Handles in-site and external navigations
   const handleNavigate = (url: string) => {
@@ -86,7 +90,7 @@ const ProjectCell = ({ content }: { content: Project }) => {
     <div
       className="project-cell"
       onClick={() => handleNavigate(content.url)}
-      style={{ backgroundColor: colors.secondary }}
+      style={{ backgroundColor }}
     >
       <img className="project-img" src={content.img} />
       <p className="project-title">{content.title}</p>

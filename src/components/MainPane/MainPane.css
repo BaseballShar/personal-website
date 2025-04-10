@@ -1,0 +1,15 @@
+main {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vh;
+}
+
+#light {
+  color: black;
+  background-color: #fae1df;
+}
+
+#dark {
+  color: #cccccc;
+  background-color: #002244;
+}

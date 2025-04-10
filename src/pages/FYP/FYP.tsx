@@ -4,6 +4,7 @@ import homeScreen from "../../assets/fyp/iOS/home.png";
 import addScreen from "../../assets/fyp/iOS/add_empty.png";
 import trendScreen from "../../assets/fyp/iOS/trend_predict.png";
 import demoVideo from "../../assets/fyp/app_demo.mp4";
+import MainPane from "../../components/MainPane/MainPane";
 
 const Introduction = () => {
   return (
@@ -266,7 +267,7 @@ const Resources = () => {
 
 const FYP = () => {
   return (
-    <>
+    <MainPane>
       <Header hasBack title="Final Year Project" />
       <Introduction />
       <Methodology />
@@ -274,7 +275,7 @@ const FYP = () => {
       <Demo />
       <Timeline />
       <Resources />
-    </>
+    </MainPane>
   );
 };
 
