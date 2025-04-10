@@ -1,4 +1,5 @@
 import { useTheme } from "../../contexts/ThemeContext";
+import Quote from "../Quote/Quote";
 import "./MainPane.css";
 
 interface MainPaneProps {
@@ -7,7 +8,12 @@ interface MainPaneProps {
 
 const MainPane: React.FC<MainPaneProps> = ({ children }) => {
   const theme = useTheme();
-  return <main id={theme}>{children}</main>;
+  return (
+    <main id={theme}>
+      {children}
+      <Quote />
+    </main>
+  );
 };
 
 export default MainPane;
